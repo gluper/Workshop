@@ -31,12 +31,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ComponentModel">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentModelWin">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\ComponentModelWin.dll</HintPath>
+    </Reference>
+    <Reference Include="Objects">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\Objects.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectsWin">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\ObjectsWin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="WorkshopObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

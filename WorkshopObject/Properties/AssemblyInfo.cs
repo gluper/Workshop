@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using _3S.CoDeSys.Core.Components;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -21,6 +22,7 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("474abb6c-de5b-4931-8645-a8f2048eea5e")]
+[assembly: PlugInGuid("{BB521017-4BA5-4870-A0A9-2F872003642F}")]
 
 // Version information for an assembly consists of the following four values:
 //

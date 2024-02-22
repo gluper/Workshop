@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace WorkshopEditor
 {
-    public class Class1
+    public class Editor
     {
+        public Editor()
+        {
+        }
+
     }
 }
