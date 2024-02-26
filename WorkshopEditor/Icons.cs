@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace WorkshopEditor
 {
-    public class Editor
+    internal static class Icons
     {
-        public Editor()
-        {
-        }
-
+        internal static Icon WorkshopIcon = Resource.WorkshopObjectSmallIcon;
     }
 }
