@@ -70,7 +70,7 @@ namespace WorkshopObject
 
         public string GetPositionText(long nPosition)
         {
-            return "position TODO";
+            return "TODO";
         }
 
         public void HandleRenamed()
