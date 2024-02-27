@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WorkshopObject;
 
 namespace WorkshopEditor
 {
@@ -21,6 +22,9 @@ namespace WorkshopEditor
         Guid _guidObject;
 
         private IMetaObject _metaObject;
+        // the decistion whether the changes in the text control are triggered by the user (false) or by 
+        // initial opening of our editor or because of Reload call (true)
+        bool _bProgrammaticalChange;
 
         public WorkshopEditor()
         {
@@ -70,6 +74,20 @@ namespace WorkshopEditor
             // this is initial call or
             // some other editor has changed our object. We need to invalidate our copy.
             _metaObject = null;
+
+            IMetaObject metaObject = GetObjectToRead();
+            IWorkshopObject workshopObject = metaObject.Object as IWorkshopObject;
+            _bProgrammaticalChange = true;
+            if (workshopObject != null)
+                _textBox1.Text = workshopObject.Text;
+            if (workshopObject is IWorkshopObject2 workshopObject2)
+                _textBox2.Text = (workshopObject as IWorkshopObject2).Description;
+            else
+            {
+                _textBox2.Enabled = false;
+                _textBox2.Text = "Requires Workshop Object at least 1.1.0.0";
+            }
+            _bProgrammaticalChange = false;
         }
 
         public void Save(bool bCommit)
@@ -149,8 +167,16 @@ namespace WorkshopEditor
 
         public void GetSelection(out long nPosition, out int nLength)
         {
-            nPosition = PositionHelper.CombinePosition(nPositionId: 0, (short)_textBox.SelectionStart);
-            nLength = _textBox.SelectionLength; 
+            if (_textBox1.Focused)
+            {
+                nPosition = PositionHelper.CombinePosition(nPositionId: 0, (short)_textBox1.SelectionStart);
+                nLength = _textBox1.SelectionLength;
+            }
+            else
+            { 
+                nPosition = PositionHelper.CombinePosition(nPositionId: 1, (short)_textBox2.SelectionStart);
+                nLength = _textBox2.SelectionLength;
+            }
         }
 
         public void Select(long nPosition, int nLength)
@@ -158,7 +184,16 @@ namespace WorkshopEditor
             PositionHelper.SplitPosition(nPosition, out long nPositionId, out short nPositionOffset);
             try
             {
-                _textBox.Select(nPositionOffset, nLength);
+                if (nPositionId == 0)
+                {
+                    _textBox1.Select(nPositionOffset, nLength);
+                    _textBox1.Focus();
+                }
+                else
+                {
+                    _textBox2.Select(nPositionOffset, nLength);
+                    _textBox2.Focus();
+                }
             }
             catch
             { 
@@ -174,5 +209,41 @@ namespace WorkshopEditor
         public void UnmarkAll(object tag)
         {
         }
+
+        private void _textBox_TextChanged(object sender, EventArgs e)
+        {
+            if (_bProgrammaticalChange)
+                return;
+
+            IMetaObject metaObject = GetObjectToModify();
+            if (metaObject == null)
+            {
+                Reload();
+                return;
+            }
+
+            IWorkshopObject workshopObject = metaObject.Object as IWorkshopObject;
+            if (workshopObject != null)
+                workshopObject.Text = _textBox1.Text;
+            if (workshopObject is IWorkshopObject2 workshopObject2)
+                workshopObject2.Description = _textBox2.Text;
+        }
+
+        public override bool Equals(object obj)
+        {
+            WorkshopEditor editor = obj as WorkshopEditor;
+
+            if (editor != null)
+                return this.ProjectHandle == editor.ProjectHandle && this.ObjectGuid == editor.ObjectGuid;
+            else
+                return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return ProjectHandle.GetHashCode() ^ ObjectGuid.GetHashCode(); 
+        }
     }
+
+
 }

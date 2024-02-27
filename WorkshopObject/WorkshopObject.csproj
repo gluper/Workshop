@@ -81,12 +81,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\+WorkshopObject\+WorkshopObject.csproj">
-      <Project>{576a64da-1e24-4321-92a5-3baf61059281}</Project>
-      <Name>+WorkshopObject</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Resource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
@@ -97,6 +91,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="WorkshopObjectSmallIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\+WorkshopObject\+WorkshopObject.csproj">
+      <Project>{576a64da-1e24-4321-92a5-3baf61059281}</Project>
+      <Name>+WorkshopObject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -7,8 +7,8 @@
     <ProjectGuid>{576A64DA-1E24-4321-92A5-3BAF61059281}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_WorkshopObject</RootNamespace>
-    <AssemblyName>+WorkshopObject</AssemblyName>
+    <RootNamespace>WorkshopObject</RootNamespace>
+    <AssemblyName>WorkshopObject</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

@@ -88,12 +88,6 @@
     <Compile Include="WorkshopEditorFactory.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\+WorkshopObject\+WorkshopObject.csproj">
-      <Project>{576a64da-1e24-4321-92a5-3baf61059281}</Project>
-      <Name>+WorkshopObject</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="WorkshopObjectSmallIcon.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -104,6 +98,12 @@
     <EmbeddedResource Include="WorkshopEditor.resx">
       <DependentUpon>WorkshopEditor.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\+WorkshopObject\+WorkshopObject.csproj">
+      <Project>{576a64da-1e24-4321-92a5-3baf61059281}</Project>
+      <Name>+WorkshopObject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
