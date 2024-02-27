@@ -67,7 +67,7 @@ namespace WorkshopEditor
 
         public void Reload()
         {
-            // probably this is initial call or
+            // this is initial call or
             // some other editor has changed our object. We need to invalidate our copy.
             _metaObject = null;
         }
@@ -96,7 +96,7 @@ namespace WorkshopEditor
 
         public Control Control => this;
 
-        public Control[] Panes => null; // throw new NotImplementedException();
+        public Control[] Panes => null; 
 
         public string Caption
         {
@@ -153,19 +153,26 @@ namespace WorkshopEditor
             nLength = _textBox.SelectionLength; 
         }
 
-        public void Mark(long nPosition, int nLength, object tag)
-        {
-            throw new NotImplementedException();
-        }
-
         public void Select(long nPosition, int nLength)
         {
-            throw new NotImplementedException();
+            PositionHelper.SplitPosition(nPosition, out long nPositionId, out short nPositionOffset);
+            try
+            {
+                _textBox.Select(nPositionOffset, nLength);
+            }
+            catch
+            { 
+                // do nothing
+            }
         }
+
+        public void Mark(long nPosition, int nLength, object tag)
+        {
+        }
+
 
         public void UnmarkAll(object tag)
         {
-            throw new NotImplementedException();
         }
     }
 }

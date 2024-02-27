@@ -85,6 +85,7 @@
     <Compile Include="WorkshopEditor.Designer.cs">
       <DependentUpon>WorkshopEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="WorkshopEditorFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\+WorkshopObject\+WorkshopObject.csproj">
