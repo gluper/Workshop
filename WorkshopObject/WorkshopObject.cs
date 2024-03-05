@@ -82,9 +82,9 @@ namespace WorkshopObject
         public string GetContentString(ref long nPosition, ref int nLength, bool bWord)
         {
             PositionHelper.SplitPosition(nPosition, out long nPositionId, out short nPositionOffset);
-            if (nPositionId == 0 && _stText.Length >= nPositionOffset + nLength)
+            if (nPositionId == 0 && _stText?.Length >= nPositionOffset + nLength)
                 return _stText.Substring(nPositionOffset, nLength);
-            else if (_stDescription.Length >= nPositionOffset + nLength)
+            else if (_stDescription?.Length >= nPositionOffset + nLength)
                 return _stDescription.Substring(nPositionOffset, nLength);
             else
                 return string.Empty;
@@ -135,6 +135,19 @@ namespace WorkshopObject
                 _stDescription = _stDescription.Remove(nPositionOffset, nLength);
                 _stDescription = _stDescription.Insert(nPositionOffset, stReplacement);
             }
+        }
+
+        public void AddDetails(string st, int v)
+        {
+            // add implementation
+        }
+
+        public void AddDetails(string st, int v, int x)
+        {
+            AddDetails(st, v);
+            
+            // ....
+
         }
 
         public IUniqueIdGenerator UniqueIdGenerator => _idGen;
