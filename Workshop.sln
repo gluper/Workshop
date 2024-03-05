@@ -7,10 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkshopObject", "WorkshopO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkshopEditor", "WorkshopEditor\WorkshopEditor.csproj", "{07D5C965-F4AE-497B-BFB0-6B9CAF6490CC}"
 	ProjectSection(ProjectDependencies) = postProject
+		{6AEEC94D-28DE-4EF7-8015-912F7E48AC97} = {6AEEC94D-28DE-4EF7-8015-912F7E48AC97}
 		{474ABB6C-DE5B-4931-8645-A8F2048EEA5E} = {474ABB6C-DE5B-4931-8645-A8F2048EEA5E}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "+WorkshopObject", "+WorkshopObject\+WorkshopObject.csproj", "{576A64DA-1E24-4321-92A5-3BAF61059281}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkshopProjectWizard", "WorkshopProjectWizard\WorkshopProjectWizard.csproj", "{6AEEC94D-28DE-4EF7-8015-912F7E48AC97}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +33,10 @@ Global
 		{576A64DA-1E24-4321-92A5-3BAF61059281}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{576A64DA-1E24-4321-92A5-3BAF61059281}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{576A64DA-1E24-4321-92A5-3BAF61059281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AEEC94D-28DE-4EF7-8015-912F7E48AC97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AEEC94D-28DE-4EF7-8015-912F7E48AC97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AEEC94D-28DE-4EF7-8015-912F7E48AC97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AEEC94D-28DE-4EF7-8015-912F7E48AC97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

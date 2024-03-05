@@ -1,0 +1,177 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6AEEC94D-28DE-4EF7-8015-912F7E48AC97}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WorkshopProjectWizard</RootNamespace>
+    <AssemblyName>WorkshopProjectWizard.plugin</AssemblyName>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ApplicationObject">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\ApplicationObject.dll</HintPath>
+    </Reference>
+    <Reference Include="Compiler">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\Compiler.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentModel">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentModelWin">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\ComponentModelWin.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceIdentification">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\DeviceIdentification.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceObject">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\DeviceObject.dll</HintPath>
+    </Reference>
+    <Reference Include="Engine">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="EngineWin">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\EngineWin.dll</HintPath>
+    </Reference>
+    <Reference Include="ImplementationObject">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\ImplementationObject.dll</HintPath>
+    </Reference>
+    <Reference Include="LibManObject">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\LibManObject.dll</HintPath>
+    </Reference>
+    <Reference Include="MessageService">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\MessageService.dll</HintPath>
+    </Reference>
+    <Reference Include="Objects">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\Objects.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectsWin">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\ObjectsWin.dll</HintPath>
+    </Reference>
+    <Reference Include="Online, Version=3.5.19.50, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\Online.dll</HintPath>
+    </Reference>
+    <Reference Include="OptionStorage">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\OptionStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="OptionStorageWin">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\OptionStorageWin.dll</HintPath>
+    </Reference>
+    <Reference Include="PlcLogicObject">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\PlcLogicObject.dll</HintPath>
+    </Reference>
+    <Reference Include="POUObject">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\POUObject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TaskConfig">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\TaskConfig.dll</HintPath>
+    </Reference>
+    <Reference Include="TextDocument">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\TextDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="UndoManager">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\UndoManager.dll</HintPath>
+    </Reference>
+    <Reference Include="VarDeclObject">
+      <HintPath>..\..\..\CODESYS Automation Platform SDK V3.5.19.50\SDK\Interfaces\VarDeclObject.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dependencies.cs" />
+    <Compile Include="Options.cs" />
+    <Compile Include="ProjectWizard.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WizardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WizardForm.Designer.cs">
+      <DependentUpon>WizardForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WizardForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WizardForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>"C:\Program Files (x86)\CODESYS 3.5.19.50\CODESYS\Common\IPMCLI.exe" /i:"$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
