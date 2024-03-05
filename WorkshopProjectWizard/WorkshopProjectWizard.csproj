@@ -166,6 +166,12 @@
   <ItemGroup>
     <None Include="StandardProject - Copy.template" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\+WorkshopObject\+WorkshopObject.csproj">
+      <Project>{576a64da-1e24-4321-92a5-3baf61059281}</Project>
+      <Name>+WorkshopObject</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

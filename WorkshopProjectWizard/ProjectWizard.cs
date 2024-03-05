@@ -18,6 +18,7 @@ using _3S.CoDeSys.LibManObject;
 using System.IO;
 using WorkshopProjectWizard;
 using WorkshopProjectWizard.Properties;
+using WorkshopObject;
 
 namespace WorkshopProjectWizard
 {
@@ -159,7 +160,12 @@ namespace WorkshopProjectWizard
                 // project. If there is not Standard.library present, report to the user.
                 APEnvironment.LibraryLoader.LoadPlaceholderLibrary("Standard", "Standard, * (System)", project.Handle, applicationObjectGuid, Guid.Empty, false);
 
+                IWorkshopObject2 workshopObject = APEnvironment.CreateWorkshopObject();
 
+                workshopObject.Text = "This is a text for autocreated object";
+                workshopObject.Description = "Description for the created object";
+
+                APEnvironment.ObjectMgr.AddObject(project.Handle, applicationObjectGuid, Guid.NewGuid(), workshopObject, "NewWorkshop", -1);
                 // Finished. Return the prepared project.
 
                 return project;

@@ -4,6 +4,7 @@ using _3S.CoDeSys.Core.ComponentModel;
 using _3S.CoDeSys.Core.Objects;
 using _3S.CoDeSys.Core.Options;
 using _3S.CoDeSys.Core.Views;
+using _3S.CoDeSys.DeviceObject;
 using _3S.CoDeSys.LibManObject;
 using _3S.CoDeSys.POUObject;
 using _3S.CoDeSys.TaskConfig;
@@ -12,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WorkshopObject;
 
 namespace WorkshopProjectWizard
 {
@@ -39,6 +41,7 @@ namespace WorkshopProjectWizard
             get { return s_bag.Value.LibraryLoaderProvider.Value; }
         }
 
+
         // more access methods and properties...
         public static IWinFormWrapper FrameForm 
         { 
@@ -53,6 +56,9 @@ namespace WorkshopProjectWizard
         public static IPOUObject CreatePOUObject() => s_bag.Value.POUObjectProvider.Create();
         public static ITaskConfigObject CreateTaskConfigObject() => s_bag.Value.TaskConfigObjectProvider.Create();
         public static ITaskObject CreateTaskObject() => s_bag.Value.TaskObjectProvider.Create();
+
+        public static IWorkshopObject2 CreateWorkshopObject() => s_bag.Value.WorkshopObjectProvider.Create();
+
     }
 
 
@@ -78,17 +84,24 @@ namespace WorkshopProjectWizard
         [InjectSingleInstance(Shared = true)]
         public ISharedSingleInstanceProvider<ILibraryLoader6> LibraryLoaderProvider { get; private set; }
 
+
         // more dependencies...
-        [InjectSingleInstance(Shared = true)]
+        [InjectSingleInstance()]
         public ISingleInstanceProvider<IObjectFactory> DeviceObjectFactoryProvider { get; private set; }
 
+        [InjectSingleInstance()]
         public ISingleInstanceProvider<IApplicationObject> ApplicationObjectProvider { get; private set; }
 
+        [InjectSingleInstance()]
         public ISingleInstanceProvider<IPOUObject> POUObjectProvider { get; private set; }
 
+        [InjectSingleInstance()]
         public ISingleInstanceProvider<ITaskConfigObject> TaskConfigObjectProvider { get; private set; }
 
+        [InjectSingleInstance()]
         public ISingleInstanceProvider<ITaskObject> TaskObjectProvider { get; private set; }
 
+        [InjectSingleInstance()]
+        public ISingleInstanceProvider<IWorkshopObject2> WorkshopObjectProvider { get; private set; }
     }
 }
