@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectTemplate>
+	<Name>
+		<DefaultString>WOrkshop Standard project</DefaultString>
+		<LocalizedString Culture="de">Standardprojekt</LocalizedString>
+		<LocalizedString Culture="fr">Projet standard</LocalizedString>
+		<LocalizedString Culture="it">Progetto standard</LocalizedString>
+		<LocalizedString Culture="es">Proyecto standard</LocalizedString>
+		<LocalizedString Culture="zh-CHS">标准工程</LocalizedString>
+		<LocalizedString Culture="ru">Стандартный проект</LocalizedString>
+		<LocalizedString Culture="ja">標準プロジェクト</LocalizedString>
+		<LocalizedString Culture="pt-BR">Projeto padrão</LocalizedString>
+		<LocalizedString Culture="tr">Standart proje</LocalizedString>
+	</Name>
+	
+	<Folder>
+		<DefaultString>Projects</DefaultString>
+		<LocalizedString Culture="de">Projekte</LocalizedString>
+		<LocalizedString Culture="fr">Projets</LocalizedString>
+		<LocalizedString Culture="it">Progetti</LocalizedString>
+		<LocalizedString Culture="es">Proyectos</LocalizedString>
+		<LocalizedString Culture="zh-CHS">工程</LocalizedString>
+		<LocalizedString Culture="ru">Проекты</LocalizedString>
+		<LocalizedString Culture="ja">プロジェクト</LocalizedString>
+		<LocalizedString Culture="pt-BR">Projetos</LocalizedString>
+		<LocalizedString Culture="tr">Projeler</LocalizedString>
+	</Folder>
+
+	<Description>
+		<DefaultString>A project containing one device, one application, and an empty implementation for PLC_PRG</DefaultString>
+		<LocalizedString Culture="de">Ein Projekt mit einem Gerät, einer Applikation und einer leeren Implementation für PLC_PRG</LocalizedString>
+		<LocalizedString Culture="fr">Un projet avec un appareil, une application et un implementation vide pour PLC_PRG</LocalizedString>
+		<LocalizedString Culture="it">Un progetto con un dispositivo, una applicazione e un implementazione in bianco per PLC_PRG</LocalizedString>
+		<LocalizedString Culture="es">Un proyecto con un dispositivo, una aplicación y una implementación vacía para PLC_PRG</LocalizedString>
+		<LocalizedString Culture="zh-CHS">包含一个设备,一个应用,一个PLC_PRG程序的工程</LocalizedString>
+		<LocalizedString Culture="ru">Проект, содержащий одно устройство, одно приложение и пустую реализацию для PLC_PRG</LocalizedString>
+		<LocalizedString Culture="ja">1 つのデバイス、1 つのアプリケーション、および PLC_PRG の空の実装を含むプロジェクト</LocalizedString>
+		<LocalizedString Culture="pt-BR">Um projeto contendo um dispositivo, uma aplicação e uma implementação vazia para PLC_PRG</LocalizedString>
+		<LocalizedString Culture="tr">Bir aygıt, bir uygulama ve PLC_PRG için boş bir yürütme içeren bir proje.</LocalizedString>
+	</Description>
+
+	<DefaultFileName>
+		<DefaultString>Untitled</DefaultString>
+		<LocalizedString Culture="de">Unbenannt</LocalizedString>
+		<LocalizedString Culture="fr">Sanstitre</LocalizedString>
+		<LocalizedString Culture="it">Senzatitolo</LocalizedString>
+		<LocalizedString Culture="es">Sintitulo</LocalizedString>
+		<LocalizedString Culture="zh-CHS">未命名</LocalizedString>
+		<LocalizedString Culture="ru">Без имени</LocalizedString>
+		<LocalizedString Culture="ja">タイトルなし</LocalizedString>
+		<LocalizedString Culture="pt-BR">Sem título</LocalizedString>
+		<LocalizedString Culture="tr">Başlıksız</LocalizedString>
+	</DefaultFileName>
+
+	<Wizard>{DF648219-6926-46F3-9272-3C34E3D1917E}</Wizard>
+</ProjectTemplate>
